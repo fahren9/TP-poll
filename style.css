@@ -33,25 +33,32 @@ h6, .fat        { font-size:18px; }
 /* DISPLAY 960px */
 header.head { background:white; position:fixed; height:60px; width:100%; z-index:99; }
     .head .logotype { float:left; background:#2E2E2E; height:40px; top:10px; left:10px; position:relative; width:40px; }
-    .head .head-nav { float:right; height:40px; top:16px; right:10px; position:relative; width: 320px; }
-        .head .head-nav li { display:inline-block; margin:0 10px; padding:8px 10px; }
+    .head .head-nav { float:right; height:40px; right:10px; position:relative; width: 320px; }
+        .head .head-nav li.head-list { display:inline-block; margin:0 10px; }
+            .head .head-nav li.head-list a.head-link { color:#2E2E2E; cursor:pointer; display:block; height:60px; line-height:60px; text-align: center; padding:0 10px; }
+            .head .head-nav li.head-list a.head-link:hover, .head .head-nav li.head-list a.head-link:focus { background:#88abee; color:white; }
+            .head .head-nav li.head-list a.head-link:active { background:#78a0ee; color:white; }
+                .head .head-nav li.head-list .count { display:none; visibility:hidden; background:white; padding-top:12px; position:absolute; right:0px; width:300px; z-index:100; }
+                .head .head-nav li.head-list:hover .count { display:block; visibility:visible; }
+                    .head .head-nav li.head-list:hover .count li { padding:12px 20px; }
 
 section.connect { height:600px; left:50%; margin:-300px 0 0 -300px; padding:80px; position:fixed; top:50%; width: 600px; }
     .connect .logo {}
     .connect h1.bigger { padding:30px 0 12px 0; text-align:center;}
     .connect h2.fatter { padding:0px; text-align: center;}
-    .connect form { margin-top:50px; }
+    .connect .errors { background:#efa3aa; color:white; margin:30px auto; padding:12px 20px; width:400px; }
+    .connect form { margin-top:0px; }
         .connect form input[type="email"], .connect form input[type="password"] { border:none; display:block; font-size:14px; height:32px; line-height:32px; margin:12px auto; padding:0 10px; width:180px; }
     .connect .or { display:block; padding:30px 0; text-align: center; }
 
-section.todo-contain, section.done-contain { height:auto; margin:0 10px; top:20px; position: relative; width:auto; z-index:9; }
+section.todo-contain, section.done-contain { height:auto; margin:0 10px; padding-top:80px; position: relative; width:auto; z-index:9; }
     .todo-contain h3, .done-contain h3 { color:#2E2E2E; margin:18px auto; text-align:center; width: 500px; }
     .todo-contain .todo-list, .done-contain .done-list { padding:0 14px; }
         .todo-contain .todo-list li, .done-contain .done-list li { display:inline-block; margin:10px 10px; }
             .todo-contain .todo-list li figure, .done-contain .done-list li figure  { background:white; height: 150px; width: 150px; }
             .todo-contain .todo-list li article, .done-contain .done-list li article { padding:8px; text-align:center; }
 
-section.done-contain { border-top: 1px solid white; padding-top:16px; top:50px; }
+section.done-contain { border-top: 1px solid white; padding-bottom:50px; padding-top:16px; top:50px; }
 
 h1.poll { background: -moz-linear-gradient(top, rgba(175,227,255,1) 50%, rgba(175,227,255,1) 60%, rgba(175,227,255,0) 100%); /* FF3.6+ */
             background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(175,227,255,1)), color-stop(60%,rgba(175,227,255,1)), color-stop(100%,rgba(175,227,255,0))); /* Chrome,Safari4+ */
